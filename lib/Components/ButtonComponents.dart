@@ -75,6 +75,15 @@ class ButtonComponents {
       ),
     );
   }
+
+  static ShaderMask myGradientLogo(icon) {
+    return ShaderMask(
+        shaderCallback: (Rect bounds) {
+          return ButtonComponents.myGradient.createShader(bounds);
+        },
+        blendMode: BlendMode.srcIn,
+        child: Icon(icon));
+  }
 }
 
 LinearGradient myGradient() => LinearGradient(

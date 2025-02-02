@@ -23,4 +23,6 @@ flutter:
 
   assets:
     - assets/images/IdiotLogo/
+    - assets/images/Profile/
+
 

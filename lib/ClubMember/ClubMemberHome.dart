@@ -9,12 +9,11 @@ class ClubMemberHome extends StatefulWidget {
 }
 
 class _ClubMemberHomeState extends State<ClubMemberHome> {
-  int _selectedIndex = 0; // Track the selected index
-
   @override
   Widget build(BuildContext context) {
+    Size screen = MediaQuery.of(context).size;
     return Scaffold(
-      appBar: Barcomponents.idiotAppBar,
+      body: Barcomponents.idiotBar(screen),
     );
   }
 }
