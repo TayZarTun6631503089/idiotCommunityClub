@@ -31,7 +31,9 @@ class _LoginFirstPageState extends State<LoginFirstPage> {
                         ButtonComponents.getLogInBox(
                             text: "Community Create",
                             route: "/logInCreate",
-                            context: context),
+                            context: context,
+                            size: 20.0,
+                            myRadius: 12),
                         SizedBox(
                           height: 10,
                         ),

@@ -102,15 +102,15 @@ class _CommunityhomecreateState extends State<Communityhomecreate> {
                       height: 20,
                     ),
                     Center(
-                      child: Container(
-                          height: 40,
-                          width: 100,
-                          child: InkWell(
-                              onDoubleTap: () {
-                                Navigator.pushNamed(context, "/home");
-                              },
-                              child:
-                                  ButtonComponents.getLogInBorder("Create"))),
+                      child: InkWell(
+                        onDoubleTap: () {
+                          Navigator.pushNamed(context, "/home");
+                        },
+                        child: Container(
+                            height: 40,
+                            width: 100,
+                            child: ButtonComponents.getLogInBorder("Create")),
+                      ),
                     )
                   ],
                 ),

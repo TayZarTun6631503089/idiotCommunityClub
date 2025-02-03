@@ -34,7 +34,11 @@ class ButtonComponents {
   }
 
   static TextButton getLogInBox(
-      {required text, required route, required context}) {
+      {required text,
+      required route,
+      required context,
+      required double size,
+      required double myRadius}) {
     return TextButton(
       onPressed: () {
         Navigator.pushNamed(context, route);
@@ -47,12 +51,14 @@ class ButtonComponents {
         height: 50,
         width: 315,
         decoration: BoxDecoration(
-            gradient: myGradient, borderRadius: BorderRadius.circular(12)),
+            gradient: myGradient,
+            borderRadius: BorderRadius.circular(myRadius)),
         child: Center(
           child: Text(
             text,
             style: TextStyle(
               color: Colors.white,
+              fontSize: size,
             ),
           ),
         ),

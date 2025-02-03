@@ -31,7 +31,9 @@ class _LoginForComState extends State<LoginForCom> {
                         ButtonComponents.getLogInBox(
                             text: "Log In",
                             route: "/logInCreate",
-                            context: context),
+                            context: context,
+                            size: 20.0,
+                            myRadius: 12),
                         SizedBox(
                           height: 10,
                         ),
