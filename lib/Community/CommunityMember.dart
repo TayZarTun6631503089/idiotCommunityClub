@@ -17,8 +17,7 @@ class _CommunitymemberState extends State<Communitymember> {
         body: Column(
           children: [
             Barcomponents.idiotBar(screen),
-            Text("Member"),
-            Flexible(child: Container())
+            Image.asset("assets/images/IdiotLogo/Layers.png"),
           ],
         ),
         bottomNavigationBar: Barcomponents.getIdiotNav(screen, context));

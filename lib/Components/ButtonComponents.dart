@@ -12,6 +12,19 @@ class ButtonComponents {
     return screenSize;
   }
 
+  static Text getMyGradientText(text, double size) {
+    return Text(
+      text,
+      style: TextStyle(
+          fontSize: size,
+          fontWeight: FontWeight.bold,
+          foreground: Paint()
+            ..shader = const LinearGradient(
+              colors: [Color(0xFF52C8FF), Color(0xFF6A84EB)],
+            ).createShader(const Rect.fromLTWH(0.0, 0.0, 200.0, 50.0))),
+    );
+  }
+
   static Text getLogoText(text) {
     return Text(
       text,

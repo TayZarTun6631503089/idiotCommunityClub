@@ -21,6 +21,17 @@ class Cardcomponent {
     letterSpacing: 0,
   );
 
+  static Container getMyOwnGradientBox(myWidget) {
+    return Container(
+      height: 480,
+      width: 315,
+      padding: EdgeInsets.all(20),
+      margin: EdgeInsets.only(bottom: 20),
+      decoration: Cardcomponent.cardBackDecoration,
+      child: myWidget,
+    );
+  }
+
   static Container idiotClubRequestCart(
           {required clubName, required description}) =>
       Container(
