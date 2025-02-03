@@ -76,13 +76,13 @@ class ButtonComponents {
     );
   }
 
-  static ShaderMask myGradientLogo(icon) {
+  static ShaderMask myGradientLogo(icon, {double logoSize = 30}) {
     return ShaderMask(
         shaderCallback: (Rect bounds) {
           return ButtonComponents.myGradient.createShader(bounds);
         },
         blendMode: BlendMode.srcIn,
-        child: Icon(icon));
+        child: Icon(icon, size: logoSize));
   }
 }
 
