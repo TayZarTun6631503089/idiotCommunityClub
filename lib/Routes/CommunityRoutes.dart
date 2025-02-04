@@ -9,7 +9,7 @@ import 'package:idiot_community_club/Login/2_LoginForCom.dart';
 class Myroutes {
   static var myRouts = {
     '/login': (context) => LoginFirstPage(),
-    '/': (context) => Communityhomecreate(),
+    '/communityHome': (context) => Communityhomecreate(),
     '/logInCreate': (context) => LoginForCom(),
     '/home': (context) => CommunityHome(),
     '/member': (context) => Communitymember(),

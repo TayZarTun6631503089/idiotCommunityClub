@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:idiot_community_club/Components/ButtonComponents.dart';
+import 'package:idiot_community_club/Components/CardComponent.dart';
 
 class Barcomponents {
   static var selectedIndex = 0;
@@ -17,14 +18,55 @@ class Barcomponents {
     );
   }
 
-  static AppBar idiotAppBar = AppBar(
-    leading: Image.asset("assets/images/IdiotLogo/LogoWithIdiot.png"),
-    flexibleSpace: Container(
-      decoration: BoxDecoration(
-        gradient: ButtonComponents.myGradient,
-      ),
-    ),
-  );
+  static Stack idiotClubBar(Size screen) {
+    return Stack(
+      children: [
+        Container(
+          height: screen.height / 6.5,
+          width: screen.width,
+          decoration: BoxDecoration(gradient: ButtonComponents.myGradient),
+        ),
+        SafeArea(
+            child: Row(
+          children: [
+            IconButton(
+                onPressed: () {},
+                icon: Icon(
+                  Icons.arrow_back,
+                  color: Colors.white,
+                  size: 24,
+                )),
+            ClipOval(
+              child: Container(
+                height: 60,
+                width: 60,
+                decoration: BoxDecoration(
+                  shape: BoxShape.circle,
+                ),
+                child: Image.asset("assets/images/Profile/RedPanda.jpeg"),
+              ),
+            ),
+            SizedBox(
+              width: 10,
+            ),
+            Text(
+              "Chess Club",
+              style: Cardcomponent.clubTitleStyle,
+            )
+          ],
+        )),
+      ],
+    );
+  }
+
+  // static AppBar idiotAppBar = AppBar(
+  //   leading: Image.asset("assets/images/IdiotLogo/LogoWithIdiot.png"),
+  //   flexibleSpace: Container(
+  //     decoration: BoxDecoration(
+  //       gradient: ButtonComponents.myGradient,
+  //     ),
+  //   ),
+  // );
 
   static Container getIdiotNav(screen, context) {
     return Container(
@@ -68,6 +110,44 @@ class Barcomponents {
     );
   }
 
+  static Container getIdiotClubNav(screen, context) {
+    return Container(
+      height: screen.height / 7,
+      width: screen.width,
+      decoration: BoxDecoration(
+        gradient: ButtonComponents.myGradient,
+      ),
+      child: BottomNavigationBar(
+          currentIndex: selectedIndex,
+          elevation: 0,
+          unselectedItemColor: Colors.white,
+          selectedFontSize: 15,
+          selectedLabelStyle: TextStyle(fontWeight: FontWeight.bold),
+          showSelectedLabels: false,
+          type: BottomNavigationBarType.fixed,
+          backgroundColor: const Color.fromARGB(0, 0, 0, 0),
+          onTap: (value) {
+            selectedIndex = value;
+            switch (value) {
+              case 0:
+                Navigator.pushNamed(context, "/");
+                break;
+              case 1:
+                Navigator.pushNamed(context, "/myClub");
+                break;
+              case 2:
+                Navigator.pushNamed(context, "/joinedClub");
+                break;
+            }
+          },
+          items: [
+            _buildNavItem(Icons.home_outlined, "Home", 0),
+            _buildNavItem(Icons.add_circle_outline, "MyClub", 1),
+            _buildNavItem(Icons.people_outline_sharp, "JoiedClub", 2),
+          ]),
+    );
+  }
+
   static BottomNavigationBarItem _buildNavItem(icon, text, index) {
     return BottomNavigationBarItem(
       icon: SizedBox(
@@ -98,6 +178,38 @@ class Barcomponents {
         ),
       ),
       label: selectedIndex == index ? "" : text,
+    );
+  }
+
+  static Stack getIdiotSearchBar() {
+    return Stack(
+      children: [
+        Container(
+          margin: EdgeInsets.all(38),
+          height: 55,
+          width: 320,
+          decoration: BoxDecoration(
+            gradient: ButtonComponents.myGradient,
+            borderRadius: BorderRadius.all(
+              Radius.circular(30),
+            ),
+          ),
+        ),
+        Container(
+          margin: EdgeInsets.all(40),
+          height: 50,
+          width: 314,
+          child: SearchBar(
+            backgroundColor: WidgetStateProperty.all(
+                const Color.fromARGB(150, 255, 255, 255)),
+            leading: Icon(
+              Icons.search,
+              size: 30,
+            ),
+            hintText: "Search Club",
+          ),
+        ),
+      ],
     );
   }
 }

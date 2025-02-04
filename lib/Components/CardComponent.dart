@@ -21,14 +21,15 @@ class Cardcomponent {
     letterSpacing: 0,
   );
 
-  static Container getMyOwnGradientBox(myWidget) {
+  static Container getMyOwnGradientBox(
+      {required double height, required double width, required child}) {
     return Container(
-      height: 480,
-      width: 315,
+      height: height,
+      width: width,
       padding: EdgeInsets.all(20),
       margin: EdgeInsets.only(bottom: 20),
       decoration: Cardcomponent.cardBackDecoration,
-      child: myWidget,
+      child: child,
     );
   }
 

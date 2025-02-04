@@ -3,14 +3,14 @@ import 'package:idiot_community_club/Components/BarComponents.dart';
 import 'package:idiot_community_club/Components/ButtonComponents.dart';
 import 'package:idiot_community_club/Components/CardComponent.dart';
 
-class ClubMemberHome extends StatefulWidget {
-  const ClubMemberHome({super.key});
+class JoinedClub extends StatefulWidget {
+  const JoinedClub({super.key});
 
   @override
-  State<ClubMemberHome> createState() => _ClubMemberHomeState();
+  State<JoinedClub> createState() => _JoinedClubState();
 }
 
-class _ClubMemberHomeState extends State<ClubMemberHome> {
+class _JoinedClubState extends State<JoinedClub> {
   @override
   Widget build(BuildContext context) {
     Size screen = MediaQuery.of(context).size;
@@ -19,7 +19,15 @@ class _ClubMemberHomeState extends State<ClubMemberHome> {
       body: Column(
         children: [
           Barcomponents.idiotClubBar(screen),
-          Barcomponents.getIdiotSearchBar(),
+          Row(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              Container(
+                  padding: EdgeInsets.all(20),
+                  child:
+                      ButtonComponents.getMyGradientText("My Joined Club", 20)),
+            ],
+          ),
           Expanded(
             child: SingleChildScrollView(
               child: Column(
