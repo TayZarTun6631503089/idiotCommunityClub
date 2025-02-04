@@ -25,8 +25,13 @@ class Loginwidget extends StatelessWidget {
                     children: [
                       Container(
                         margin: EdgeInsets.only(top: 80, bottom: 20),
-                        child: Image.asset(
-                            "assets/images/IdiotLogo/IdiotLogoWhite.png"),
+                        child: InkWell(
+                          onTap: () {
+                            Navigator.pushNamed(context, "/");
+                          },
+                          child: Image.asset(
+                              "assets/images/IdiotLogo/IdiotLogoWhite.png"),
+                        ),
                       ),
                       ButtonComponents.getLogoText("IDIOT COMMUNITY CLUB",
                           fontSize: 24, color: Colors.white),
@@ -39,7 +44,7 @@ class Loginwidget extends StatelessWidget {
                 children: [
                   Container(
                       width: screen.width,
-                      height: 560,
+                      height: 538,
                       decoration: BoxDecoration(
                         color: Colors.white,
                         borderRadius: BorderRadius.only(

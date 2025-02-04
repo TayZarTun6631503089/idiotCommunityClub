@@ -34,8 +34,15 @@ class _LoginFirstPageState extends State<LoginFirstPage> {
                     padding: EdgeInsets.only(top: 100),
                     child: Column(
                       children: [
-                        ButtonComponents.getGradientBox(
-                            text: "Community Create", size: 16.0, myRadius: 12),
+                        InkWell(
+                          onTap: () {
+                            Navigator.pushNamed(context, "/loginForCom");
+                          },
+                          child: ButtonComponents.getGradientBox(
+                              text: "Community Create",
+                              size: 16.0,
+                              myRadius: 12),
+                        ),
                         SizedBox(
                           height: 10,
                         ),

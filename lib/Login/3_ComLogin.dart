@@ -78,7 +78,7 @@ class _ComLoginState extends State<ComLogin> {
                   ),
                   InkWell(
                       onTap: () {
-                        print("Hi");
+                        Navigator.pushNamed(context, "/comReg");
                       },
                       child: ButtonComponents.getMyGradientText(
                           "Register Now", 12))

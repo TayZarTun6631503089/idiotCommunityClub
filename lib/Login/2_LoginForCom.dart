@@ -20,7 +20,12 @@ class _LoginForComState extends State<LoginForCom> {
               Column(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
-                  Image.asset("assets/images/IdiotLogo/group_3.png"),
+                  InkWell(
+                      onTap: () {
+                        Navigator.pushNamed(context, "/");
+                      },
+                      child:
+                          Image.asset("assets/images/IdiotLogo/group_3.png")),
                   ButtonComponents.getLogoText("IDIOT"),
                   ButtonComponents.getLogoText("COMMUNITY"),
                   ButtonComponents.getLogoText("CLUB"),
@@ -28,12 +33,21 @@ class _LoginForComState extends State<LoginForCom> {
                     padding: EdgeInsets.only(top: 100),
                     child: Column(
                       children: [
-                        ButtonComponents.getGradientBox(
-                            text: "Log In", size: 16.0, myRadius: 12),
+                        InkWell(
+                          onTap: () {
+                            Navigator.pushNamed(context, "/comLogin");
+                          },
+                          child: ButtonComponents.getGradientBox(
+                              text: "Log In", size: 16.0, myRadius: 12),
+                        ),
                         SizedBox(
                           height: 10,
                         ),
-                        ButtonComponents.getLogInBorder("Sign Up"),
+                        InkWell(
+                            onDoubleTap: () {
+                              Navigator.pushNamed(context, "/comReg");
+                            },
+                            child: ButtonComponents.getLogInBorder("Sign Up")),
                       ],
                     ),
                   )

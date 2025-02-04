@@ -22,13 +22,13 @@ class _ComRegState extends State<ComReg> {
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 SizedBox(
-                  height: 10,
+                  height: 5,
                 ),
                 ButtonComponents.getMyGradientText("Sign Up", 25),
                 ButtonComponents.getMyGradientText(
                     "Sign up now to join amazing clubs!", 12),
                 SizedBox(
-                  height: 10,
+                  height: 5,
                 ),
                 ...getMyInputFinal(
                     "Username", "Enter Your Username", (value) {}),
@@ -74,7 +74,7 @@ class _ComRegState extends State<ComReg> {
                     ),
                     InkWell(
                         onTap: () {
-                          print("Hi");
+                          Navigator.pushNamed(context, "/comLogin");
                         },
                         child: ButtonComponents.getMyGradientText("Log in", 12))
                   ],
