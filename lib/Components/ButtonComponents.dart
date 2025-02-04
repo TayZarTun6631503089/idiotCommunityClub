@@ -7,6 +7,11 @@ class ButtonComponents {
       begin: Alignment.bottomCenter,
       end: Alignment.topCenter);
 
+  static LinearGradient myGradientLTR = LinearGradient(
+      colors: [Color(0xFF52C8FF), Color(0xFF6A84EB)],
+      begin: Alignment.centerRight,
+      end: Alignment.centerLeft);
+
   static Size getScreenSize(context) {
     Size screenSize = MediaQuery.of(context).size;
     return screenSize;
@@ -25,41 +30,32 @@ class ButtonComponents {
     );
   }
 
-  static Text getLogoText(text) {
+  static Text getLogoText(text,
+      {double? fontSize = 40,
+      Color? color = const Color.fromARGB(255, 0, 0, 0)}) {
     return Text(
       text,
       style: TextStyle(
-          fontFamily: GoogleFonts.zenTokyoZoo().fontFamily, fontSize: 40),
+          fontFamily: GoogleFonts.zenTokyoZoo().fontFamily,
+          fontSize: fontSize,
+          color: color),
     );
   }
 
-  static TextButton getLogInBox(
-      {required text,
-      required route,
-      required context,
-      required double size,
-      required double myRadius}) {
-    return TextButton(
-      onPressed: () {
-        Navigator.pushNamed(context, route);
-      },
-      style: TextButton.styleFrom(
-        padding: EdgeInsets.zero,
-      ),
-      child: Container(
-        padding: EdgeInsets.symmetric(horizontal: 20, vertical: 10),
-        height: 50,
-        width: 315,
-        decoration: BoxDecoration(
-            gradient: myGradient,
-            borderRadius: BorderRadius.circular(myRadius)),
-        child: Center(
-          child: Text(
-            text,
-            style: TextStyle(
-              color: Colors.white,
-              fontSize: size,
-            ),
+  static Container getGradientBox(
+      {required text, required double size, required double myRadius}) {
+    return Container(
+      padding: EdgeInsets.symmetric(horizontal: 20, vertical: 10),
+      height: 50,
+      width: 315,
+      decoration: BoxDecoration(
+          gradient: myGradient, borderRadius: BorderRadius.circular(myRadius)),
+      child: Center(
+        child: Text(
+          text,
+          style: TextStyle(
+            color: Colors.white,
+            fontSize: size,
           ),
         ),
       ),

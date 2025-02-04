@@ -50,7 +50,7 @@ class Barcomponents {
               width: 10,
             ),
             Text(
-              "Chess Club",
+              "Chess Community",
               style: Cardcomponent.clubTitleStyle,
             )
           ],
@@ -201,7 +201,7 @@ class Barcomponents {
           width: 314,
           child: SearchBar(
             backgroundColor: WidgetStateProperty.all(
-                const Color.fromARGB(150, 255, 255, 255)),
+                const Color.fromARGB(255, 255, 255, 255)),
             leading: Icon(
               Icons.search,
               size: 30,

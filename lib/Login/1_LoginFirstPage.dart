@@ -10,6 +10,12 @@ class LoginFirstPage extends StatefulWidget {
 
 class _LoginFirstPageState extends State<LoginFirstPage> {
   @override
+  void initState() {
+    // TODO: implement initState
+    super.initState();
+  }
+
+  @override
   Widget build(BuildContext context) {
     return Scaffold(
         backgroundColor: Colors.white,
@@ -28,12 +34,8 @@ class _LoginFirstPageState extends State<LoginFirstPage> {
                     padding: EdgeInsets.only(top: 100),
                     child: Column(
                       children: [
-                        ButtonComponents.getLogInBox(
-                            text: "Community Create",
-                            route: "/logInCreate",
-                            context: context,
-                            size: 20.0,
-                            myRadius: 12),
+                        ButtonComponents.getGradientBox(
+                            text: "Community Create", size: 16.0, myRadius: 12),
                         SizedBox(
                           height: 10,
                         ),

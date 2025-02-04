@@ -71,12 +71,8 @@ Card _getMyMembers(Member member, context) {
                       Container(
                         height: 35,
                         width: 85,
-                        child: ButtonComponents.getLogInBox(
-                            text: "Accept",
-                            route: "/",
-                            context: context,
-                            size: 10.0,
-                            myRadius: 8),
+                        child: ButtonComponents.getGradientBox(
+                            text: "Accept", size: 10.0, myRadius: 8),
                       ),
                       SizedBox(
                         width: 10,

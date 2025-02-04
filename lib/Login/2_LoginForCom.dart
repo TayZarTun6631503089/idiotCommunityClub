@@ -28,12 +28,8 @@ class _LoginForComState extends State<LoginForCom> {
                     padding: EdgeInsets.only(top: 100),
                     child: Column(
                       children: [
-                        ButtonComponents.getLogInBox(
-                            text: "Log In",
-                            route: "/logInCreate",
-                            context: context,
-                            size: 20.0,
-                            myRadius: 12),
+                        ButtonComponents.getGradientBox(
+                            text: "Log In", size: 16.0, myRadius: 12),
                         SizedBox(
                           height: 10,
                         ),

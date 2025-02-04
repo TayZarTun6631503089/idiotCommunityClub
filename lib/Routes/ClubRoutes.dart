@@ -6,10 +6,10 @@ import 'package:idiot_community_club/ClubMember/MyClub.dart';
 
 class Clubroutes {
   static var clubRoutes = {
-    "/myClubHome": (context) => ClubMemberHome(),
+    "/clubhome": (context) => ClubMemberHome(),
     "/myClub": (context) => MyClub(),
     "/myClubForm": (context) => MyClubForm(),
     "/joinedClub": (context) => JoinedClub(),
-    "/": (context) => MyClubAnnouncemnt(),
+    "/clubAnnouncement": (context) => MyClubAnnouncemnt(),
   };
 }

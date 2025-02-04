@@ -46,15 +46,19 @@ class _MyClubAnnouncemntState extends State<MyClubAnnouncemnt> {
             child: ListView.builder(
               padding: EdgeInsets.all(10),
               reverse: true,
-              itemCount: Exampleconstants.reqMembers.length,
+              itemCount: Exampleconstants.myMessages.length,
               itemBuilder: (context, index) {
+                double myLength =
+                    Exampleconstants.myMessages[index].message.length / 24;
+                double myH = myLength < 7 ? myLength * 30 : myLength * 21;
+                ;
                 return Align(
                   alignment: Alignment.topRight,
                   child: Container(
                     margin: EdgeInsets.only(top: 10, right: 20, bottom: 5),
                     padding: EdgeInsets.only(top: 10, right: 10, left: 10),
                     width: 250,
-                    height: myHeight,
+                    height: myH,
                     decoration: BoxDecoration(
                         borderRadius: BorderRadius.only(
                           topLeft: Radius.circular(24),
@@ -65,10 +69,10 @@ class _MyClubAnnouncemntState extends State<MyClubAnnouncemnt> {
                     child: Column(
                       children: [
                         Container(
-                          height: myHeight - 30,
+                          height: myH - 30,
                           width: 220,
                           child: Text(
-                            Exampleconstants.reqMembers[index].name,
+                            Exampleconstants.myMessages[index].message,
                             style: TextStyle(color: Colors.white),
                           ),
                         ),
