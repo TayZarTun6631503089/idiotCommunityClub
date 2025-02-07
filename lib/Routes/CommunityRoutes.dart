@@ -6,10 +6,9 @@ import 'package:idiot_community_club/Community/CommunityProfile.dart';
 import 'package:idiot_community_club/Login/1_LoginFirstPage.dart';
 import 'package:idiot_community_club/Login/2_LoginForCom.dart';
 
-class Myroutes {
+class Communityroutes {
   static var myRouts = {
-    '/login': (context) => LoginFirstPage(),
-    '/communityHome': (context) => Communityhomecreate(),
+    '/': (context) => Communityhomecreate(),
     '/logInCreate': (context) => LoginForCom(),
     '/home': (context) => CommunityHome(),
     '/member': (context) => Communitymember(),

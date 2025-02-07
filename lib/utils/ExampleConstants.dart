@@ -1,4 +1,5 @@
 class Exampleconstants {
+  static int myCount = 0;
   static List<Member> reqMembers = [
     Member(
         name: "Alex",

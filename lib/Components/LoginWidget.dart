@@ -67,7 +67,8 @@ class Loginwidget extends StatelessWidget {
       myLabel,
       bool myObsecure = false,
       password = false,
-      VoidCallback? togglePassword}) {
+      VoidCallback? togglePassword,
+      required myController}) {
     return Container(
       margin: EdgeInsets.symmetric(vertical: 10),
       height: 50,
@@ -76,6 +77,7 @@ class Loginwidget extends StatelessWidget {
           color: Color.fromARGB(92, 106, 132, 235),
           borderRadius: BorderRadius.all(Radius.circular(12))),
       child: TextFormField(
+        controller: myController,
         obscureText: myObsecure,
         onChanged: getInput,
         decoration: InputDecoration(

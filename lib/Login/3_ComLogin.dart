@@ -32,6 +32,7 @@ class _ComLoginState extends State<ComLogin> {
               ),
               ButtonComponents.getMyGradientText("Email", 18),
               Loginwidget.inputBox(
+                  myController: null,
                   getInput: (value) {
                     print(value);
                   },
@@ -49,6 +50,7 @@ class _ComLoginState extends State<ComLogin> {
                     showPassword = !showPassword;
                   });
                 },
+                myController: null,
               ),
               Row(
                 mainAxisAlignment: MainAxisAlignment.end,

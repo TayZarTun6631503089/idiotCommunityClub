@@ -5,9 +5,9 @@ import 'package:idiot_community_club/Login/4_ComReg.dart';
 
 class LoginRoutes {
   static var loginRoutes = {
-    "/": (context) => LoginFirstPage(),
+    "/first": (context) => LoginFirstPage(),
     "/comLogin": (context) => ComLogin(),
     "/loginForCom": (context) => LoginForCom(),
-    "/comReg": (context) => ComReg(),
+    "/": (context) => ComReg(),
   };
 }
