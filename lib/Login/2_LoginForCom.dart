@@ -23,7 +23,7 @@ class _LoginForComState extends State<LoginForCom> {
                 children: [
                   InkWell(
                       onTap: () {
-                        Navigator.pushNamed(context, "/");
+                        Navigator.pushNamed(context, "/login");
                       },
                       child:
                           Image.asset("assets/images/IdiotLogo/group_3.png")),

@@ -47,7 +47,8 @@ class _LoginFirstPageState extends State<LoginFirstPage> {
                         SizedBox(
                           height: 10,
                         ),
-                        ButtonComponents.getLogInBorder("Community Member"),
+                        ButtonComponents.getGradientBox(
+                            text: "Community Member", size: 16.0, myRadius: 12),
                       ],
                     ),
                   )
